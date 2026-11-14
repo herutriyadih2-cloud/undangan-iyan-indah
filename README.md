@@ -1,6 +1,6 @@
-# Demo Undangan Digital 3D — Iyan None & Indah
+# Undangan Digital 3D — Iyan None & Indah
 
-Demo undangan pernikahan statis bertema **surga/langit hidup** dengan sampul, animasi pembuka 2.5D/3D selama ±7 detik, parallax mouse/sentuh, countdown, profil, acara, Amplop Digital, video Galeri Kenangan, dan penutup. Seluruh ilustrasi/video dibuat orisinal, bukan hasil ekstraksi aset eksternal atau TikTok.
+Undangan pernikahan statis bertema **surga/langit hidup** dengan sampul, animasi pembuka 2.5D/3D selama ±7 detik, parallax mouse/sentuh, countdown, profil, acara, Amplop Digital, video Galeri Kenangan, RSVP WhatsApp, dan penutup. Seluruh ilustrasi/video dibuat orisinal, bukan hasil ekstraksi aset eksternal atau TikTok.
 
 ## Status data
 
@@ -22,13 +22,13 @@ Data yang sudah dimasukkan dari pengguna:
 
 Ketiganya dioptimalkan ke WebP tanpa mengubah file sumber. QR dipotong dari area 320×320 piksel dan dioptimalkan menjadi 640×640 tanpa mengubah file aslinya. Galeri kini memakai video ilustrasi burung dan gunung yang dibuat orisinal secara prosedural.
 
-## Menjalankan demo
+## Menjalankan undangan
 
 Tidak ada framework, dependensi runtime, font eksternal, atau CDN.
 
 ### Cara paling mudah
 
-Double-click `index.html`. Demo dapat dibuka langsung melalui `file://` di Chrome/Edge/Firefox modern.
+Double-click `index.html`. Undangan dapat dibuka langsung melalui `file://` di Chrome/Edge/Firefox modern.
 
 ### Melalui server lokal (opsional)
 
@@ -130,7 +130,7 @@ Generator menghasilkan `preview/heaven-video-contact-sheet.png` dan tidak merend
 
 ### 5. Amplop Digital
 
-Data rekening/e-wallet dan seluruh label berada di objek `gifts` dalam `js/data.js`. Setiap metode memiliki `name`, `numberLabel`, `number`, dan `accountName`. Tombol **Salin Nomor** memakai Clipboard API dengan fallback `document.execCommand` agar tetap dapat digunakan saat demo dibuka melalui `file://`. Feedback keberhasilan/kegagalan tampil di kartu dan diumumkan melalui `aria-live`.
+Data rekening/e-wallet dan seluruh label berada di objek `gifts` dalam `js/data.js`. Setiap metode memiliki `name`, `numberLabel`, `number`, dan `accountName`. Tombol **Salin Nomor** memakai Clipboard API dengan fallback `document.execCommand` agar tetap dapat digunakan saat undangan dibuka melalui `file://`. Feedback keberhasilan/kegagalan tampil di kartu dan diumumkan melalui `aria-live`.
 
 Contoh struktur:
 
@@ -152,7 +152,7 @@ Tambahkan atau hapus metode melalui `gifts.methods`. Pastikan nomor dan nama pem
 
 Ikon acara merupakan SVG orisinal bergaris emas: `assets/images/event-akad.svg` (cincin berlian/ornamen) dan `assets/images/event-resepsi.svg` (lengkungan/lentera). Path serta alt text ikon berada di `events.icons`.
 
-### 6. Musik (opsional)
+### 7. Musik (opsional)
 
 Backsound aktif menggunakan `assets/audio/backsound-muliansyah-indah.m4a` dari file pengguna `Downloads/AUDIO-2026-11-14-08-17-13.m4a`, dipotong mulai **detik 13** dengan FFmpeg (durasi sekitar 4 menit 26 detik). File asli tidak diubah. Konfigurasi di `js/data.js`:
 
@@ -167,9 +167,25 @@ audio: {
 
 Kontrol hanya muncul setelah browser berhasil memuat audio. Pemutaran dimulai dari gestur pengguna jika diizinkan browser; pengguna tetap dapat play/pause sendiri. Gunakan file audio yang benar-benar dimiliki atau berlisensi.
 
-### 7. Ornamen
+### 8. Ornamen
 
-SVG di `assets/images/` dibuat khusus untuk demo. Path lengkungan, rangkaian bunga, dan monogram juga dapat diganti melalui `js/data.js`.
+SVG di `assets/images/` dibuat khusus untuk undangan. Path lengkungan, rangkaian bunga, dan monogram juga dapat diganti melalui `js/data.js`.
+
+## 6. RSVP WhatsApp dan Link Tamu
+
+Section **Konfirmasi Kehadiran & Bagikan Undangan** menyediakan input nama, tombol **Hadir/Tidak Hadir**, pratinjau link, salin link dengan clipboard fallback, serta WhatsApp share. Nama dari query `to` juga ditampilkan pada sampul melalui `textContent`, dengan sanitasi karakter kontrol, trim, dan batas 60 karakter. Mode `preview=open` dan `preview=scene` tetap kompatibel dengan parameter `to`.
+
+Contoh link produksi dengan nama tamu:
+
+```text
+https://herutriyadih2-cloud.github.io/undangan-iyan-indah/?to=Bapak%20Andi
+```
+
+- Nomor tujuan RSVP saat ini: `62895342263665`.
+- Untuk mengganti nomor, ubah `rsvp.whatsappNumber` di `js/data.js` dengan format internasional tanpa `+` atau spasi.
+- URL yang dibagikan diatur melalui `rsvp.productionUrl`.
+- Pesan RSVP memuat nama tamu, pilihan kehadiran, serta detail akad/resepsi dari `events.items`.
+- Label, pesan pembuka, feedback, dan konfigurasi lain berada di objek `rsvp`.
 
 ## Informasi yang perlu dikirim untuk versi final
 
@@ -179,14 +195,14 @@ SVG di `assets/images/` dibuat khusus untuk demo. Path lengkungan, rangkaian bun
 4. Musik instrumental berlisensi (opsional).
 5. Konfirmasi akhir nomor dan nama pemilik rekening/e-wallet sebelum publikasi.
 6. Teks pembuka/penutup, dress code, RSVP, atau live streaming bila ingin ditambahkan.
-7. Konfirmasi warna dan aset final sebelum rendering video vertikal 1080×1920 (di luar cakupan demo ini).
+7. Konfirmasi warna dan aset final sebelum rendering video vertikal 1080×1920 (di luar cakupan undangan ini).
 
 ## Catatan
 
-- Koneksi internet hanya diperlukan ketika pengguna memilih membuka Google Maps; tampilan dan aset demo sepenuhnya lokal.
+- Koneksi internet hanya diperlukan ketika pengguna memilih membuka Google Maps; tampilan dan aset undangan sepenuhnya lokal.
 - Amplop Digital hanya menyalin nomor di sisi browser; tidak ada verifikasi pembayaran atau backend.
-- Backsound aktif dan diputar setelah gestur pengguna; RSVP dan buku tamu tidak diaktifkan pada kerangka ini.
-- Video galeri MP4 sudah termasuk; rendering video vertikal untuk animasi intro tetap di luar cakupan demo ini.
+- Backsound aktif dan diputar setelah gestur pengguna; RSVP membuka WhatsApp dan tidak menyimpan data ke backend.
+- Video galeri MP4 sudah termasuk; rendering video vertikal untuk animasi intro tetap di luar cakupan undangan ini.
 
 ## Hosting produksi
 
@@ -196,3 +212,7 @@ Undangan dipublikasikan melalui GitHub Pages dengan dukungan pengguna. Repositor
 - Website: https://herutriyadih2-cloud.github.io/undangan-iyan-indah/
 
 Folder `preview/`, `tools/`, dan `tests/` hanya digunakan selama pengembangan lokal dan tidak disertakan dalam paket hosting. Tidak ada token atau kredensial yang disimpan di repository. Repository ini bersifat publik; data acara dan metode pembayaran ditampilkan sesuai persetujuan pengguna.
+
+## Catatan tanggal tampilan utama
+
+Sampul, animasi pembuka, hero, dan stempel tanggal menggunakan **6 Desember 2026** sebagai acara puncak/resepsi. Detail kartu Akad Nikah tetap 5 Desember 2026 dan Resepsi tetap 6 Desember 2026. Countdown diarahkan ke Akad Nikah pada 5 Desember 2026 pukul 08.00 WIB.

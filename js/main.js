@@ -96,6 +96,15 @@
       galleryCaption: data.gallery.video.caption,
       galleryMeta: data.gallery.video.meta,
       galleryDescription: data.gallery.video.description,
+      rsvpEyebrow: data.rsvp.eyebrow,
+      rsvpTitle: data.rsvp.title,
+      rsvpIntro: data.rsvp.intro,
+      rsvpGuestLabel: data.rsvp.guestLabel,
+      rsvpAttendLabel: data.rsvp.attendLabel,
+      rsvpDeclineLabel: data.rsvp.declineLabel,
+      sharePreviewLabel: data.rsvp.previewLabel,
+      copyShareLink: data.rsvp.copyButton,
+      whatsappShareLabel: data.rsvp.shareLabel,
       closingEyebrow: data.closing.eyebrow,
       closingTitle: data.closing.title,
       closingMessage: data.closing.message,
@@ -366,6 +375,70 @@
     applyMotionPreference();
   }
 
+  function setupRSVP() {
+    const config = data.rsvp;
+    const input = byId("rsvpGuestName");
+    const shareInput = byId("shareLink");
+    const attend = byId("rsvpAttend");
+    const decline = byId("rsvpDecline");
+    const share = byId("whatsappShare");
+    const status = byId("rsvpStatus");
+    const copyStatus = byId("copyStatus");
+    const sanitize = (value) => String(value || "")
+      .replace(/[\u0000-\u001F\u007F]/g, "")
+      .replace(/\s+/g, " ")
+      .trim()
+      .slice(0, config.maxNameLength);
+    const eventDetails = data.events.items.map((event) => `${event.type}: ${event.date}, ${event.time}. ${event.venue}, ${event.address}`).join("\n");
+    const guestFromQuery = sanitize(new URLSearchParams(window.location.search).get("to"));
+    input.value = guestFromQuery;
+    input.placeholder = config.guestPlaceholder;
+    byId("guestName").textContent = guestFromQuery || data.guest.name;
+
+    const updateLinks = () => {
+      const name = sanitize(input.value);
+      const invitationLink = `${config.productionUrl}${name ? `?to=${encodeURIComponent(name)}` : ""}`;
+      shareInput.value = invitationLink;
+      attend.href = `https://wa.me/${config.whatsappNumber}?text=${encodeURIComponent(`${config.messageIntro} ${name} memilih ${config.attendLabel}.\n${config.eventIntro}\n${eventDetails}`)}`;
+      decline.href = `https://wa.me/${config.whatsappNumber}?text=${encodeURIComponent(`${config.messageIntro} ${name} memilih ${config.declineLabel}.\n${config.eventIntro}\n${eventDetails}`)}`;
+      share.href = `https://wa.me/?text=${encodeURIComponent(`${config.shareIntro}\n${eventDetails}\nBuka undangan: ${invitationLink}`)}`;
+    };
+    const validate = (event) => {
+      if (sanitize(input.value)) {
+        status.textContent = "";
+        return;
+      }
+      event.preventDefault();
+      status.textContent = config.requiredMessage;
+      input.focus();
+    };
+
+    input.addEventListener("input", () => {
+      const sanitized = sanitize(input.value);
+      byId("guestName").textContent = sanitized || data.guest.name;
+      status.textContent = "";
+      updateLinks();
+    });
+    attend.addEventListener("click", validate);
+    decline.addEventListener("click", validate);
+    byId("rsvpForm").addEventListener("submit", (event) => event.preventDefault());
+    byId("copyShareLink").addEventListener("click", async () => {
+      const link = shareInput.value;
+      let copied = false;
+      if (navigator.clipboard && typeof navigator.clipboard.writeText === "function") {
+        try {
+          await navigator.clipboard.writeText(link);
+          copied = true;
+        } catch (error) {
+          copied = false;
+        }
+      }
+      if (!copied) copied = fallbackCopy(link);
+      copyStatus.textContent = copied ? config.copied : config.copyFailed;
+    });
+    updateLinks();
+  }
+
   function startCountdown() {
     const target = new Date(data.couple.weddingDateISO).getTime();
     const timer = byId("countdownTimer");
@@ -433,6 +506,7 @@
   const audio = byId("backgroundAudio");
   const audioButton = byId("audioToggle");
   let audioAvailable = false;
+  let audioStartedByGesture = false;
 
   function updateAudioButton() {
     const playing = !audio.paused && !audio.ended;
@@ -456,6 +530,7 @@
       audioButton.disabled = false;
       audioButton.hidden = false;
       updateAudioButton();
+      playAudioAfterGesture();
     });
     audio.addEventListener("error", () => {
       audioAvailable = false;
@@ -481,7 +556,8 @@
   }
 
   function playAudioAfterGesture() {
-    if (!audioAvailable || !audio.paused) return;
+    audioStartedByGesture = true;
+    if (!audioStartedByGesture || !audioAvailable || !audio.paused) return;
     audio.play().catch(() => {
       // Autoplay yang ditolak browser bukan error aplikasi; kontrol tetap dapat dipakai.
       updateAudioButton();
@@ -494,6 +570,7 @@
   buildEvents();
   buildGifts();
   setupGallery();
+  setupRSVP();
   startCountdown();
   setupReveals();
   setupActiveNavigation();

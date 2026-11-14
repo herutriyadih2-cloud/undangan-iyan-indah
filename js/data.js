@@ -7,10 +7,9 @@
  */
 window.invitationData = {
   meta: {
-    title: "Undangan Pernikahan Iyan None & Indah — Demo",
-    description: "Undangan digital Iyan None dan Indah. Akad 5 Desember 2026 pukul 08.00–13.00 WIB; resepsi 6 Desember 2026 pukul 13.00 WIB–selesai.",
-    favicon: "assets/images/monogram.svg",
-    demoLabel: "DEMO • ILUSTRASI VIDEO ORIGINAL"
+    title: "Undangan Pernikahan Iyan None & Indah",
+    description: "Undangan pernikahan Iyan None dan Indah. Akad 5 Desember 2026 pukul 08.00–13.00 WIB; resepsi 6 Desember 2026 pukul 13.00 WIB–selesai.",
+    favicon: "assets/images/monogram.svg"
   },
 
   assets: {
@@ -37,7 +36,7 @@ window.invitationData = {
     initials: "I  •  I",
     weddingDateISO: "2026-12-05T08:00:00+07:00",
     dateLong: "Sabtu, 5 Desember 2026",
-    dateShort: "05–06 . 12 . 2026",
+    dateShort: "06 . 12 . 2026",
     saveTheDate: "Save the Date",
     opening: "Dengan memohon rahmat dan ridha Tuhan Yang Maha Esa, kami bermaksud menyelenggarakan pernikahan kami.",
     closingNames: "Iyan None & Indah"
@@ -46,14 +45,14 @@ window.invitationData = {
   cover: {
     eyebrow: "The Wedding Of",
     title: "Iyan None & Indah",
-    date: "5 & 6 Desember 2026",
+    date: "6 Desember 2026",
     intro: "Sebuah perjalanan menuju hari yang kami nantikan.",
     button: "Buka Undangan",
     buttonHint: "Sentuh untuk memulai perjalanan",
     photoAlt: "Ilustrasi 3D Iyan None dan Indah dengan busana pernikahan putih silver",
     monogramLeft: "I",
     monogramRight: "I",
-    number: "05 / 12 / 26"
+    number: "06 / 12 / 26"
   },
 
   scene: {
@@ -61,7 +60,7 @@ window.invitationData = {
     title: "Iyan None & Indah",
     subtitle: "Dua hati, satu perjalanan",
     saveTheDate: "Save the Date",
-    date: "05–06 . 12 . 2026",
+    date: "06 . 12 . 2026",
     skip: "Lewati",
     replay: "Putar Ulang",
     replayLong: "Putar ulang animasi",
@@ -90,12 +89,12 @@ window.invitationData = {
   hero: {
     eyebrow: "Together with their families",
     names: "Iyan None & Indah",
-    date: "5 & 6 Desember 2026",
+    date: "6 Desember 2026",
     invitation: "Kami mengundang Anda untuk menjadi bagian dari hari bahagia kami.",
     scroll: "Gulir untuk menjelajah",
     photoAlt: "Ilustrasi 3D Iyan None dan Indah pada undangan pernikahan",
     watermark: "I & I",
-    sealDay: "05",
+    sealDay: "06",
     sealMonth: "DEC",
     sealYear: "26"
   },
@@ -272,6 +271,28 @@ window.invitationData = {
     }
   },
 
+  rsvp: {
+    whatsappNumber: "62895342263665",
+    productionUrl: "https://herutriyadih2-cloud.github.io/undangan-iyan-indah/",
+    maxNameLength: 60,
+    eyebrow: "RSVP & share the joy",
+    title: "Konfirmasi Kehadiran & Bagikan Undangan",
+    intro: "Kabari kami melalui WhatsApp, lalu bagikan undangan ini kepada keluarga dan sahabat.",
+    guestLabel: "Nama Tamu",
+    guestPlaceholder: "Contoh: Bapak Andi",
+    attendLabel: "Hadir",
+    declineLabel: "Tidak Hadir",
+    requiredMessage: "Masukkan nama tamu terlebih dahulu.",
+    previewLabel: "Pratinjau link undangan",
+    copyButton: "Salin Link Undangan",
+    copied: "Tautan berhasil disalin",
+    copyFailed: "Tautan belum dapat disalin. Silakan salin secara manual.",
+    shareLabel: "Bagikan via WhatsApp",
+    messageIntro: "Halo Iyan None & Indah, saya",
+    eventIntro: "Informasi acara:",
+    shareIntro: "Dengan hormat, kami mengundang Anda ke pernikahan Iyan None & Indah."
+  },
+
   closing: {
     eyebrow: "With love & gratitude",
     title: "Terima Kasih",
@@ -279,7 +300,7 @@ window.invitationData = {
     names: "Iyan None & Indah",
     signoff: "Kami yang berbahagia, beserta keluarga",
     backToCover: "Kembali ke Sampul",
-    footer: "Undangan digital demo • Foto utama/profil pengguna dan video ilustrasi orisinal."
+    footer: "Iyan None & Indah • 6 Desember 2026 • Terima kasih atas doa dan kehadiran Anda."
   },
 
   audio: {
