@@ -271,6 +271,37 @@ window.invitationData = {
     }
   },
 
+  comments: {
+    eyebrow: "Kind words",
+    title: "Ucapan & Komentar",
+    intro: "Contoh ucapan dari orang-orang terdekat. Seluruh teks berikut adalah contoh, bukan testimoni asli.",
+    exampleLabel: "CONTOH UCAPAN",
+    previous: "Ucapan sebelumnya",
+    next: "Ucapan berikutnya",
+    pause: "Jeda otomatis",
+    resume: "Lanjutkan otomatis",
+    indicatorLabel: "Tampilkan ucapan",
+    autoMs: 5500,
+    items: [
+      {
+        category: "Keluarga",
+        text: "Semoga Iyan None dan Indah selalu saling menguatkan, berbagi kebahagiaan, dan diberi keluarga yang penuh berkah."
+      },
+      {
+        category: "Sahabat",
+        text: "Selamat menempuh perjalanan baru! Semoga setiap hari kalian dipenuhi tawa, kesabaran, dan kenangan indah."
+      },
+      {
+        category: "Tetangga",
+        text: "Turut berbahagia untuk kalian berdua. Semoga rumah tangga kalian rukun, hangat, dan menjadi tempat pulang terbaik."
+      },
+      {
+        category: "Rekan Kerja",
+        text: "Selamat untuk Iyan None dan Indah. Semoga sukses dalam setiap langkah bersama dan dikelilingi banyak orang baik."
+      }
+    ]
+  },
+
   rsvp: {
     whatsappNumber: "62895342263665",
     productionUrl: "https://herutriyadih2-cloud.github.io/undangan-iyan-indah/",

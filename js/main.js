@@ -96,6 +96,10 @@
       galleryCaption: data.gallery.video.caption,
       galleryMeta: data.gallery.video.meta,
       galleryDescription: data.gallery.video.description,
+      commentsEyebrow: data.comments.eyebrow,
+      commentsTitle: data.comments.title,
+      commentsIntro: data.comments.intro,
+      commentExampleLabel: data.comments.exampleLabel,
       rsvpEyebrow: data.rsvp.eyebrow,
       rsvpTitle: data.rsvp.title,
       rsvpIntro: data.rsvp.intro,
@@ -375,6 +379,105 @@
     applyMotionPreference();
   }
 
+  function setupComments() {
+    const config = data.comments;
+    const carousel = byId("commentsCarousel");
+    const card = byId("commentCard");
+    const toggle = byId("commentsToggle");
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let index = 0;
+    let timer = null;
+    let hovered = false;
+    let focused = false;
+    let manualPaused = false;
+    let touchStartX = null;
+
+    const updateCard = () => {
+      const item = config.items[index];
+      byId("commentCategory").textContent = item.category;
+      byId("commentText").textContent = item.text;
+      byId("commentCounter").textContent = `${index + 1} / ${config.items.length}`;
+      carousel.dataset.index = String(index);
+      carousel.querySelectorAll(".comment-indicator").forEach((indicator, indicatorIndex) => {
+        const active = indicatorIndex === index;
+        indicator.classList.toggle("is-active", active);
+        indicator.setAttribute("aria-current", String(active));
+        indicator.tabIndex = active ? 0 : -1;
+      });
+    };
+    const move = (direction, manual = true) => {
+      index = (index + direction + config.items.length) % config.items.length;
+      if (motionQuery.matches) {
+        updateCard();
+      } else {
+        card.classList.add("is-changing");
+        window.setTimeout(() => {
+          updateCard();
+          card.classList.remove("is-changing");
+        }, 180);
+      }
+      if (manual) card.setAttribute("aria-live", "polite");
+      else card.setAttribute("aria-live", "off");
+    };
+    const shouldRun = () => !motionQuery.matches && !hovered && !focused && !manualPaused && !document.hidden;
+    const restart = () => {
+      window.clearInterval(timer);
+      timer = null;
+      toggle.textContent = manualPaused ? config.resume : config.pause;
+      toggle.setAttribute("aria-pressed", String(manualPaused));
+      if (shouldRun()) timer = window.setInterval(() => move(1, false), config.autoMs);
+    };
+
+    config.items.forEach((item, itemIndex) => {
+      const indicator = make("button", "comment-indicator");
+      indicator.type = "button";
+      indicator.setAttribute("aria-label", `${config.indicatorLabel} ${itemIndex + 1}: ${item.category}`);
+      indicator.addEventListener("click", () => {
+        index = itemIndex;
+        updateCard();
+        restart();
+      });
+      byId("commentsIndicators").appendChild(indicator);
+    });
+    byId("commentsPrev").setAttribute("aria-label", config.previous);
+    byId("commentsNext").setAttribute("aria-label", config.next);
+    byId("commentsPrev").addEventListener("click", () => { move(-1); restart(); });
+    byId("commentsNext").addEventListener("click", () => { move(1); restart(); });
+    toggle.addEventListener("click", () => {
+      manualPaused = !manualPaused;
+      restart();
+    });
+    carousel.addEventListener("mouseenter", () => { hovered = true; restart(); });
+    carousel.addEventListener("mouseleave", () => { hovered = false; restart(); });
+    carousel.addEventListener("focusin", () => { focused = true; restart(); });
+    carousel.addEventListener("focusout", () => { focused = false; restart(); });
+    carousel.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+        event.preventDefault();
+        move(event.key === "ArrowRight" ? 1 : -1);
+        restart();
+      }
+    });
+    carousel.addEventListener("touchstart", (event) => {
+      touchStartX = event.changedTouches[0].clientX;
+      hovered = true;
+      restart();
+    }, { passive: true });
+    carousel.addEventListener("touchend", (event) => {
+      if (touchStartX !== null) {
+        const delta = event.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(delta) > 45) move(delta < 0 ? 1 : -1);
+      }
+      touchStartX = null;
+      hovered = false;
+      restart();
+    }, { passive: true });
+    document.addEventListener("visibilitychange", restart);
+    motionQuery.addEventListener("change", restart);
+    updateCard();
+    restart();
+  }
+
   function setupRSVP() {
     const config = data.rsvp;
     const input = byId("rsvpGuestName");
@@ -570,6 +673,7 @@
   buildEvents();
   buildGifts();
   setupGallery();
+  setupComments();
   setupRSVP();
   startCountdown();
   setupReveals();

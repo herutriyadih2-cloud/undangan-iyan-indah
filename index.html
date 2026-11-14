@@ -251,6 +251,35 @@
       </div>
     </section>
 
+    <section class="comments-section section" id="comments" aria-labelledby="commentsTitle">
+      <div class="section-inner narrow center">
+        <header class="section-header reveal">
+          <p class="eyebrow" id="commentsEyebrow"></p>
+          <h2 class="section-title script" id="commentsTitle"></h2>
+          <p class="section-intro" id="commentsIntro"></p>
+        </header>
+        <div class="comments-carousel reveal" id="commentsCarousel" role="group" aria-roledescription="carousel" aria-label="Contoh ucapan dan komentar" tabindex="0">
+          <figure class="comment-card" id="commentCard">
+            <div class="comment-quote-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M10 27c0-8 4-13 12-15l1 4c-5 2-7 4-7 7h6v13H10V27Zm20 0c0-8 4-13 12-15l1 4c-5 2-7 4-7 7h6v13H30V27Z"/></svg>
+            </div>
+            <blockquote><p id="commentText"></p></blockquote>
+            <figcaption>
+              <span class="comment-category" id="commentCategory"></span>
+              <span class="comment-example" id="commentExampleLabel"></span>
+              <small class="comment-counter" id="commentCounter"></small>
+            </figcaption>
+          </figure>
+          <div class="comments-controls">
+            <button class="comment-arrow" id="commentsPrev" type="button" aria-label="">←</button>
+            <div class="comments-indicators" id="commentsIndicators"></div>
+            <button class="comment-arrow" id="commentsNext" type="button" aria-label="">→</button>
+          </div>
+          <button class="comment-pause" id="commentsToggle" type="button" aria-label="" aria-pressed="false"></button>
+        </div>
+      </div>
+    </section>
+
     <section class="rsvp-section section" id="rsvp" aria-labelledby="rsvpTitle">
       <div class="section-inner narrow center reveal">
         <p class="eyebrow" id="rsvpEyebrow"></p>

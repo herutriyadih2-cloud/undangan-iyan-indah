@@ -152,7 +152,7 @@ Tambahkan atau hapus metode melalui `gifts.methods`. Pastikan nomor dan nama pem
 
 Ikon acara merupakan SVG orisinal bergaris emas: `assets/images/event-akad.svg` (cincin berlian/ornamen) dan `assets/images/event-resepsi.svg` (lengkungan/lentera). Path serta alt text ikon berada di `events.icons`.
 
-### 7. Musik (opsional)
+### 8. Musik (opsional)
 
 Backsound aktif menggunakan `assets/audio/backsound-muliansyah-indah.m4a` dari file pengguna `Downloads/AUDIO-2026-11-14-08-17-13.m4a`, dipotong mulai **detik 13** dengan FFmpeg (durasi sekitar 4 menit 26 detik). File asli tidak diubah. Konfigurasi di `js/data.js`:
 
@@ -167,11 +167,17 @@ audio: {
 
 Kontrol hanya muncul setelah browser berhasil memuat audio. Pemutaran dimulai dari gestur pengguna jika diizinkan browser; pengguna tetap dapat play/pause sendiri. Gunakan file audio yang benar-benar dimiliki atau berlisensi.
 
-### 8. Ornamen
+### 9. Ornamen
 
 SVG di `assets/images/` dibuat khusus untuk undangan. Path lengkungan, rangkaian bunga, dan monogram juga dapat diganti melalui `js/data.js`.
 
-## 6. RSVP WhatsApp dan Link Tamu
+## 6. Ucapan & Komentar
+
+Section **Ucapan & Komentar** menampilkan empat contoh komentar dari kategori Keluarga, Sahabat, Tetangga, dan Rekan Kerja. Semua teks diberi label **contoh ucapan** dan bukan testimoni asli. Data berada di objek `comments` pada `js/data.js` dan dapat diganti tanpa mengubah logika carousel.
+
+Carousel berputar otomatis setiap 5,5 detik dengan fade/slide, tombol prev/next, indikator, serta pause/resume. Autoplay berhenti saat hover atau focus, mendukung Arrow keys dan swipe, dan tidak berjalan pada `prefers-reduced-motion`. Tidak ada backend atau pengumpulan komentar pengguna.
+
+## 7. RSVP WhatsApp dan Link Tamu
 
 Section **Konfirmasi Kehadiran & Bagikan Undangan** menyediakan input nama, tombol **Hadir/Tidak Hadir**, pratinjau link, salin link dengan clipboard fallback, serta WhatsApp share. Nama dari query `to` juga ditampilkan pada sampul melalui `textContent`, dengan sanitasi karakter kontrol, trim, dan batas 60 karakter. Mode `preview=open` dan `preview=scene` tetap kompatibel dengan parameter `to`.
 
