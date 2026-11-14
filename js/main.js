@@ -542,6 +542,39 @@
     updateLinks();
   }
 
+  function setupQuoteAnimation() {
+    const section = document.querySelector(".quote-section");
+    if (!section) return;
+
+    const buildWords = (id, interval) => {
+      const element = byId(id);
+      const fullText = element.textContent.trim();
+      element.setAttribute("aria-label", fullText);
+      element.textContent = "";
+      fullText.split(/\s+/).forEach((word, index) => {
+        const span = make("span", "quote-word", word);
+        span.setAttribute("aria-hidden", "true");
+        span.style.setProperty("--word-delay", `${index * interval}ms`);
+        element.appendChild(span);
+        element.appendChild(document.createTextNode(" "));
+      });
+    };
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    buildWords("quoteArabic", 85);
+    buildWords("quoteText", 48);
+
+    const reveal = () => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85 && rect.bottom > 0) {
+        section.classList.add("is-visible");
+        window.removeEventListener("scroll", reveal);
+      }
+    };
+    window.addEventListener("scroll", reveal, { passive: true });
+    reveal();
+  }
+
   function startCountdown() {
     const target = new Date(data.couple.weddingDateISO).getTime();
     const timer = byId("countdownTimer");
@@ -677,6 +710,7 @@
   setupRSVP();
   startCountdown();
   setupReveals();
+  setupQuoteAnimation();
   setupActiveNavigation();
   setupAudio();
 

@@ -1020,3 +1020,16 @@ blockquote cite { display: block; margin-top: 25px; color: var(--gold); font-fam
   .comment-card { transition: none; }
   .comment-card.is-changing { opacity: 1; transform: none; }
 }
+
+/* Ayat muncul perlahan kata demi kata. */
+.quote-word {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(3px);
+  transform: translateY(12px);
+  transition: opacity .65s ease var(--word-delay, 0ms), transform .65s var(--ease) var(--word-delay, 0ms), filter .65s ease var(--word-delay, 0ms);
+}
+.quote-section.is-visible .quote-word { opacity: 1; filter: blur(0); transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .quote-word { opacity: 1; filter: none; transform: none; transition: none; }
+}

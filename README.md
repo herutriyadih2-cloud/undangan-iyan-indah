@@ -226,3 +226,7 @@ Sampul, animasi pembuka, hero, dan stempel tanggal menggunakan **6 Desember 2026
 ## Gambar pratinjau WhatsApp
 
 `assets/images/og-whatsapp.png` adalah gambar Open Graph berukuran **1200×630** yang dibuat khusus dengan foto pengantin, nama, dan tanggal acara. Meta tag Open Graph dan Twitter Card terpasang di `index.html`, sehingga WhatsApp dapat menampilkan pratinjau visual saat link dibagikan. Pratinjau dapat membutuhkan waktu untuk diperbarui di cache WhatsApp.
+
+## Animasi ayat
+
+Teks Arab dan terjemahan pada bagian ayat muncul **kata demi kata** ketika section memasuki viewport. Setiap kata memiliki delay berjenjang, fade, blur, dan perpindahan vertikal kecil. Pada `prefers-reduced-motion`, teks ditampilkan langsung tanpa animasi.
