@@ -222,3 +222,7 @@ Folder `preview/`, `tools/`, dan `tests/` hanya digunakan selama pengembangan lo
 ## Catatan tanggal tampilan utama
 
 Sampul, animasi pembuka, hero, dan stempel tanggal menggunakan **6 Desember 2026** sebagai acara puncak/resepsi. Detail kartu Akad Nikah tetap 5 Desember 2026 dan Resepsi tetap 6 Desember 2026. Countdown diarahkan ke Akad Nikah pada 5 Desember 2026 pukul 08.00 WIB.
+
+## Gambar pratinjau WhatsApp
+
+`assets/images/og-whatsapp.png` adalah gambar Open Graph berukuran **1200×630** yang dibuat khusus dengan foto pengantin, nama, dan tanggal acara. Meta tag Open Graph dan Twitter Card terpasang di `index.html`, sehingga WhatsApp dapat menampilkan pratinjau visual saat link dibagikan. Pratinjau dapat membutuhkan waktu untuk diperbarui di cache WhatsApp.
