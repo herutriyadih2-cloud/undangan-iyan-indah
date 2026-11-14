@@ -414,7 +414,7 @@
         window.setTimeout(() => {
           updateCard();
           card.classList.remove("is-changing");
-        }, 180);
+        }, 550);
       }
       if (manual) card.setAttribute("aria-live", "polite");
       else card.setAttribute("aria-live", "off");

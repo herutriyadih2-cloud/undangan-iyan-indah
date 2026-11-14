@@ -281,7 +281,7 @@ window.invitationData = {
     pause: "Jeda otomatis",
     resume: "Lanjutkan otomatis",
     indicatorLabel: "Tampilkan ucapan",
-    autoMs: 5500,
+    autoMs: 4000,
     items: [
       {
         category: "Keluarga",
