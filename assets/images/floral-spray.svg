@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <defs>
+    <linearGradient id="stem" x1="70" y1="420" x2="530" y2="50" gradientUnits="userSpaceOnUse"><stop stop-color="#596657"/><stop offset="1" stop-color="#9AA48F"/></linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#AEB7A5"/><stop offset="1" stop-color="#687765"/></linearGradient>
+    <radialGradient id="petal"><stop stop-color="#D9D6CC"/><stop offset=".45" stop-color="#F7F5EF"/><stop offset="1" stop-color="#FFFEFA"/></radialGradient>
+    <g id="baby">
+      <circle r="8" fill="#FBFAF5" stroke="#D8D8D0" stroke-width=".8"/>
+      <circle cx="-5" cy="-4" r="4" fill="white" opacity=".8"/><circle cx="2" cy="1" r="2" fill="#C5B890"/>
+    </g>
+    <g id="rose">
+      <circle r="39" fill="url(#petal)" stroke="#DDDAD1" stroke-width="1"/>
+      <path d="M-31 5C-23-26 15-37 31-12C42 10 18 35-6 29C-28 24-35 2-20-13C-5-28 21-17 21 1C21 17 1 23-10 13C-20 4-10-10 2-9C12-8 14 3 7 7C1 11-5 6-3 1" stroke="#C9C7BE" stroke-width="2" stroke-linecap="round"/>
+      <path d="M-28-17C-11-12-9-29 5-32M27 18C14 13 20 31 4 34" stroke="#E5E1D8" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <g id="leafShape"><path d="M0 0C8-24 32-29 44-25C39-6 21 6 0 0Z" fill="url(#leaf)"/><path d="M2-1L35-21" stroke="#D3D8CA" stroke-width=".8"/></g>
+  </defs>
+  <g stroke="url(#stem)" stroke-linecap="round">
+    <path d="M43 432C165 352 244 267 352 155C413 92 467 52 557 25" stroke-width="3"/>
+    <path d="M102 391C148 292 197 206 271 100C293 70 319 43 350 19" stroke-width="2"/>
+    <path d="M140 363C256 339 372 280 486 186C519 159 544 130 571 91" stroke-width="2.5"/>
+    <path d="M207 305C191 227 186 160 207 78M278 233C335 193 390 135 414 73M345 161C390 162 445 150 496 112" stroke-width="1.5"/>
+    <path d="M172 331C121 284 98 232 88 177M264 250C227 188 225 135 238 70M369 274C435 263 502 226 548 184" stroke-width="1.3"/>
+  </g>
+  <g opacity=".95">
+    <use href="#leafShape" transform="translate(109 375) rotate(-113) scale(1.15)"/><use href="#leafShape" transform="translate(157 333) rotate(147) scale(.9)"/>
+    <use href="#leafShape" transform="translate(208 287) rotate(-103)"/><use href="#leafShape" transform="translate(258 247) rotate(135) scale(1.1)"/>
+    <use href="#leafShape" transform="translate(321 183) rotate(-79) scale(.8)"/><use href="#leafShape" transform="translate(374 139) rotate(129)"/>
+    <use href="#leafShape" transform="translate(438 80) rotate(-69) scale(.75)"/><use href="#leafShape" transform="translate(285 323) rotate(166) scale(.9)"/>
+    <use href="#leafShape" transform="translate(413 248) rotate(152) scale(.85)"/><use href="#leafShape" transform="translate(181 194) rotate(195) scale(.7)"/>
+  </g>
+  <g>
+    <use href="#rose" transform="translate(187 331) scale(1.2)"/><use href="#rose" transform="translate(280 250) scale(.92) rotate(24)"/>
+    <use href="#rose" transform="translate(365 180) scale(.7) rotate(-15)"/><use href="#rose" transform="translate(135 368) scale(.67) rotate(35)"/>
+    <use href="#rose" transform="translate(442 124) scale(.48)"/>
+  </g>
+  <g>
+    <use href="#baby" transform="translate(91 175) scale(.8)"/><use href="#baby" transform="translate(103 202) scale(.65)"/>
+    <use href="#baby" transform="translate(201 79) scale(.85)"/><use href="#baby" transform="translate(216 103) scale(.7)"/>
+    <use href="#baby" transform="translate(236 68) scale(.65)"/><use href="#baby" transform="translate(266 105) scale(.9)"/>
+    <use href="#baby" transform="translate(349 21) scale(.7)"/><use href="#baby" transform="translate(326 46) scale(.6)"/>
+    <use href="#baby" transform="translate(414 72) scale(.75)"/><use href="#baby" transform="translate(400 98) scale(.55)"/>
+    <use href="#baby" transform="translate(493 111) scale(.8)"/><use href="#baby" transform="translate(519 90) scale(.55)"/>
+    <use href="#baby" transform="translate(556 26) scale(.85)"/><use href="#baby" transform="translate(532 45) scale(.65)"/>
+    <use href="#baby" transform="translate(570 91) scale(.8)"/><use href="#baby" transform="translate(548 183) scale(.85)"/>
+    <use href="#baby" transform="translate(526 200) scale(.55)"/><use href="#baby" transform="translate(486 186) scale(.65)"/>
+    <use href="#baby" transform="translate(86 224) scale(.55)"/><use href="#baby" transform="translate(121 253) scale(.6)"/>
+  </g>
+  <g fill="#FDFCF8" stroke="#D8D8D0" stroke-width=".6" opacity=".9">
+    <circle cx="311" cy="96" r="4"/><circle cx="459" cy="57" r="5"/><circle cx="467" cy="212" r="4"/>
+    <circle cx="174" cy="127" r="5"/><circle cx="150" cy="212" r="4"/><circle cx="334" cy="296" r="5"/>
+  </g>
+</svg>

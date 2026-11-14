@@ -1,0 +1,13 @@
+# Artefak preview dan pengujian tidak disertakan dalam hosting produksi
+preview/
+tools/
+tests/
+
+# Profil browser sementara
+.chrome-verification/
+.edge-verification/
+
+# File sistem dan log
+.DS_Store
+Thumbs.db
+*.log

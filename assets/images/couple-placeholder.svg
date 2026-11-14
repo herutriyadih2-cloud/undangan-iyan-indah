@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#FAFAF6"/><stop offset=".55" stop-color="#E4E7E0"/><stop offset="1" stop-color="#C9CEC4"/></linearGradient>
+    <linearGradient id="dress" x1="410" y1="430" x2="580" y2="940" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFFFF"/><stop offset=".6" stop-color="#F2F1EB"/><stop offset="1" stop-color="#D8DAD3"/></linearGradient>
+    <linearGradient id="suit" x1="250" y1="420" x2="390" y2="900" gradientUnits="userSpaceOnUse"><stop stop-color="#555C56"/><stop offset="1" stop-color="#252B27"/></linearGradient>
+    <radialGradient id="light"><stop stop-color="#FFFFFF" stop-opacity=".95"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <ellipse cx="405" cy="260" rx="360" ry="380" fill="url(#light)"/>
+  <path d="M97 913V372C97 238 194 209 267 155C327 111 360 55 400 16C440 55 473 111 533 155C606 209 703 238 703 372V913" stroke="#FCFCF8" stroke-width="26" opacity=".72"/>
+  <path d="M111 913V378C111 254 201 224 278 168C335 126 366 73 400 40C434 73 465 126 522 168C599 224 689 254 689 378V913" stroke="#B9A67F" stroke-width="1.4" opacity=".55"/>
+  <path d="M0 840L400 660L800 840V1000H0V840Z" fill="#D4D8CF" opacity=".55"/>
+  <path d="M0 916H800M95 840L320 1000M705 840L480 1000" stroke="#F8F8F3" stroke-width="2" opacity=".7"/>
+  <ellipse cx="410" cy="925" rx="224" ry="35" fill="#777F74" opacity=".18" filter="url(#shadow)"/>
+
+  <!-- Sosok mempelai pria, ilustrasi abstrak orisinal -->
+  <g>
+    <ellipse cx="321" cy="349" rx="53" ry="66" fill="#D2B39A"/>
+    <path d="M270 344C266 285 297 265 330 277C369 285 379 318 369 350C352 330 339 306 301 315L278 363L270 344Z" fill="#343A35"/>
+    <path d="M299 402V435H344V399" fill="#C6A48B"/>
+    <path d="M241 472C254 435 286 421 320 422C359 420 391 438 405 477L389 734L369 908H280L251 738L241 472Z" fill="url(#suit)"/>
+    <path d="M299 426L321 454L344 426L358 446L338 556H305L283 447L299 426Z" fill="#F7F6F1"/>
+    <path d="M283 435L319 546L273 499M358 437L323 546L374 493" stroke="#777E76" stroke-width="3"/>
+    <path d="M309 459H333L328 481H314L309 459Z" fill="#9C865E"/>
+    <path d="M251 474C230 542 224 629 230 697L258 698L284 513M395 477C415 539 425 603 441 647L412 666L368 526" fill="#343B36"/>
+    <path d="M280 899L276 942H320L325 899M345 899L350 942H393L369 899" fill="#272D29"/>
+    <circle cx="319" cy="360" r="2" fill="#6C5547" opacity=".55"/>
+    <path d="M307 383C320 389 334 386 340 378" stroke="#A57F69" stroke-width="1.3" opacity=".65"/>
+  </g>
+
+  <!-- Sosok mempelai wanita, ilustrasi abstrak orisinal -->
+  <g>
+    <path d="M444 342C431 275 475 253 515 281C549 305 544 355 532 396L463 403C442 383 437 362 444 342Z" fill="#4A4039"/>
+    <ellipse cx="490" cy="354" rx="49" ry="63" fill="#D8BAA1"/>
+    <path d="M443 344C447 293 477 277 506 290C535 302 544 326 537 350C520 331 501 313 465 319L447 365L443 344Z" fill="#413A35"/>
+    <path d="M469 405V438H512V402" fill="#C9A88F"/>
+    <path d="M420 484C431 446 460 429 489 429C522 429 550 447 562 486L546 654L614 922C546 952 443 952 377 922L437 650L420 484Z" fill="url(#dress)" stroke="#D4D5CE" stroke-width="2"/>
+    <path d="M454 431C459 471 520 471 527 432L550 456C538 505 445 504 430 456L454 431Z" fill="#FDFCF8"/>
+    <path d="M489 489V887M451 502L415 906M529 500L574 908" stroke="#D9DAD3" stroke-width="2" opacity=".75"/>
+    <path d="M426 469C407 530 398 585 391 645L420 655L459 501M554 470C570 528 563 590 539 632L511 613L522 499" fill="#F5F4EE" stroke="#D5D6CF" stroke-width="2"/>
+    <path d="M441 320C415 402 426 461 458 490M534 320C564 402 550 458 522 490" stroke="#FAFAF6" stroke-width="9" opacity=".65"/>
+    <path d="M478 381C489 387 501 383 507 376" stroke="#AA826C" stroke-width="1.3" opacity=".65"/>
+    <circle cx="479" cy="358" r="2" fill="#6C5547" opacity=".55"/>
+    <g transform="translate(405 638)">
+      <path d="M0 0L-42 89M8 4L42 83M-2 4L-3 98" stroke="#76836F" stroke-width="3"/>
+      <circle cx="-13" cy="5" r="27" fill="#FCFBF6" stroke="#D4D3CA"/><circle cx="19" cy="12" r="25" fill="#F7F6F0" stroke="#D4D3CA"/>
+      <circle cx="1" cy="-13" r="24" fill="#FFFFFF" stroke="#D4D3CA"/><path d="M-24 4C-7-16 13 20 26-3M-8-23C11-7-17 10 4 19" stroke="#D3D0C6" stroke-width="2"/>
+      <circle cx="-39" cy="19" r="7" fill="white"/><circle cx="40" cy="-2" r="8" fill="white"/><circle cx="34" cy="35" r="6" fill="white"/>
+    </g>
+  </g>
+  <path d="M405 656C413 649 424 648 432 654" stroke="#C6A48B" stroke-width="12" stroke-linecap="round"/>
+  <g fill="#FFFFFF" opacity=".8">
+    <circle cx="143" cy="306" r="6"/><circle cx="168" cy="282" r="4"/><circle cx="634" cy="331" r="5"/>
+    <circle cx="655" cy="302" r="7"/><circle cx="151" cy="536" r="4"/><circle cx="672" cy="565" r="5"/>
+  </g>
+  <path d="M55 955C184 907 234 895 281 887M745 955C616 907 566 895 519 887" stroke="#A5AE9D" stroke-width="3" opacity=".5"/>
+</svg>

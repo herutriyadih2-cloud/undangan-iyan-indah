@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="cloth" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FAF9F4"/><stop offset=".5" stop-color="#DFE1DA"/><stop offset="1" stop-color="#F6F5F0"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8F713D"/><stop offset=".25" stop-color="#E4CE9F"/><stop offset=".5" stop-color="#AA8749"/><stop offset=".75" stop-color="#F2DFC0"/><stop offset="1" stop-color="#92723D"/></linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#cloth)"/>
+  <path d="M0 120C280 280 414 46 702 179C905 273 1030 184 1200 65M0 720C280 514 455 797 745 617C948 493 1070 643 1200 706" stroke="#FFFFFF" stroke-width="65" opacity=".35"/>
+  <path d="M0 235C310 388 500 141 767 289C953 391 1072 325 1200 234M0 600C238 469 412 655 627 550C867 433 1018 541 1200 479" stroke="#B8BDB4" stroke-width="3" opacity=".35"/>
+  <ellipse cx="596" cy="581" rx="282" ry="60" fill="#63685F" opacity=".16" filter="url(#blur)"/>
+  <g transform="translate(462 404) rotate(-18)">
+    <ellipse rx="159" ry="198" fill="none" stroke="#806536" stroke-width="35" opacity=".25" transform="translate(8 14)"/>
+    <ellipse rx="159" ry="198" fill="none" stroke="url(#gold)" stroke-width="29"/>
+    <ellipse rx="139" ry="177" fill="none" stroke="#F4E4C6" stroke-width="3" opacity=".8"/>
+  </g>
+  <g transform="translate(700 399) rotate(17)">
+    <ellipse rx="151" ry="192" fill="none" stroke="#806536" stroke-width="35" opacity=".2" transform="translate(8 14)"/>
+    <ellipse rx="151" ry="192" fill="none" stroke="url(#gold)" stroke-width="29"/>
+    <ellipse rx="131" ry="171" fill="none" stroke="#F4E4C6" stroke-width="3" opacity=".8"/>
+    <path d="M-55-163L-29-213L0-235L29-213L55-163" fill="none" stroke="url(#gold)" stroke-width="13"/>
+    <path d="M0-270L42-231L25-190H-25L-42-231L0-270Z" fill="#F9FCFA" stroke="#B4C0B8" stroke-width="3"/>
+    <path d="M-42-231H42M0-270L-12-231L0-190L12-231L0-270ZM-42-231L0-190L42-231" stroke="#CBD6D0" stroke-width="2"/>
+  </g>
+  <g fill="#FFFFFF" opacity=".7"><circle cx="179" cy="182" r="6"/><circle cx="1020" cy="614" r="8"/><circle cx="964" cy="159" r="5"/><circle cx="211" cy="640" r="4"/></g>
+</svg>

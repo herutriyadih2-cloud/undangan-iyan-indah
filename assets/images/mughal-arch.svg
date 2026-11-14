@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 1000" fill="none">
+  <defs>
+    <linearGradient id="gold" x1="80" y1="80" x2="640" y2="930" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D9C69F"/><stop offset=".48" stop-color="#A88951"/><stop offset="1" stop-color="#E3D4B7"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="0" y1="0" x2="700" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/><stop offset=".5" stop-color="#B8BBB4"/><stop offset="1" stop-color="#F5F4EF"/>
+    </linearGradient>
+  </defs>
+  <path d="M73 970V401C73 291 138 244 207 209C276 174 302 91 350 35C398 91 424 174 493 209C562 244 627 291 627 401V970" stroke="url(#silver)" stroke-width="19" opacity=".7"/>
+  <path d="M73 970V401C73 291 138 244 207 209C276 174 302 91 350 35C398 91 424 174 493 209C562 244 627 291 627 401V970" stroke="url(#gold)" stroke-width="2"/>
+  <path d="M91 970V407C91 306 151 261 218 226C285 191 313 116 350 68C387 116 415 191 482 226C549 261 609 306 609 407V970" stroke="url(#gold)" stroke-width="1.2" opacity=".9"/>
+  <path d="M111 970V417C111 324 165 281 230 246C295 211 320 146 350 103C380 146 405 211 470 246C535 281 589 324 589 417V970" stroke="url(#silver)" stroke-width="4"/>
+  <path d="M56 970H644M56 984H644M48 401H97M603 401H652" stroke="url(#gold)" stroke-width="1.4"/>
+  <path d="M51 968V389M649 968V389" stroke="url(#silver)" stroke-width="5"/>
+  <g stroke="url(#gold)" stroke-width="1" opacity=".85">
+    <path d="M350 35V4M343 13L350 4L357 13M66 390L48 378L39 390L48 402L66 390ZM634 390L652 378L661 390L652 402L634 390Z"/>
+    <path d="M197 208C201 187 217 176 235 179C226 192 219 207 218 226M503 208C499 187 483 176 465 179C474 192 481 207 482 226"/>
+    <path d="M73 512C45 497 42 469 60 453C76 469 82 490 73 512ZM627 512C655 497 658 469 640 453C624 469 618 490 627 512Z"/>
+    <path d="M73 666C45 651 42 623 60 607C76 623 82 644 73 666ZM627 666C655 651 658 623 640 607C624 623 618 644 627 666Z"/>
+    <path d="M73 820C45 805 42 777 60 761C76 777 82 798 73 820ZM627 820C655 805 658 777 640 761C624 777 618 798 627 820Z"/>
+  </g>
+  <g fill="#C2A56F">
+    <circle cx="350" cy="20" r="3"/><circle cx="48" cy="390" r="3"/><circle cx="652" cy="390" r="3"/>
+    <circle cx="73" cy="970" r="3"/><circle cx="627" cy="970" r="3"/>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Denah dan rute menuju Kediaman Mempelai Wanita</title>
+  <desc id="desc">Denah vektor Gg. Selat Madura, Jl. Desa Kuala Dua, dan Alter Supadio/Sungai Asam dengan landmark serta rute beranimasi menuju Kediaman Mempelai Wanita.</desc>
+  <defs>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#3e493f" flood-opacity=".16"/></filter>
+    <g id="mosque"><path d="M-15 12V-2H15V12M-19 12H19M-11-2C-11-15 11-15 11-2M0-13V-19M-3-19H3" fill="none" stroke="#77877e" stroke-width="2" stroke-linecap="round"/></g>
+    <g id="shop"><path d="M-14 0L0-12L14 0V13H-14V0ZM-17 0H17M-5 13V5H5V13" fill="none" stroke="#77877e" stroke-width="2" stroke-linejoin="round"/></g>
+  </defs>
+  <style>
+    .location-route{stroke-dasharray:12 8;animation:routeFlow 3.4s linear infinite}.location-pin-pulse{transform-origin:350px 110px;animation:pinPulse 2s ease-out infinite}.location-route-marker{offset-path:path("M70 395C150 365 232 336 275 282C310 241 350 211 350 170L350 110");animation:markerTravel 6s linear infinite}@keyframes routeFlow{to{stroke-dashoffset:-40}}@keyframes pinPulse{0%{r:12;opacity:.75}100%{r:34;opacity:0}}@keyframes markerTravel{0%{offset-distance:0%;opacity:0}8%,90%{opacity:1}100%{offset-distance:100%;opacity:0}}@media(prefers-reduced-motion:reduce){.location-route,.location-pin-pulse,.location-route-marker{animation:none}.location-route-marker{offset-distance:55%;opacity:1}}
+  </style>
+  <rect width="640" height="480" rx="8" fill="#f4f0e7"/>
+  <path d="M40 170H580M350 20V450M40 420L600 350M60 250H275M425 250H580M60 95H245M450 95H580M160 170V420M495 170V345" fill="none" stroke="#d4c9b6" stroke-width="25" stroke-linecap="round"/>
+  <path d="M40 170H580M350 20V450M40 420L600 350M60 250H275M425 250H580M60 95H245M450 95H580M160 170V420M495 170V345" fill="none" stroke="#fffdf7" stroke-width="19" stroke-linecap="round"/>
+  <g fill="#53605a" font-family="Georgia,serif">
+    <text x="320" y="155" text-anchor="middle" font-size="15" letter-spacing="2">GG. SELAT MADURA</text>
+    <text x="365" y="320" text-anchor="middle" font-size="14" letter-spacing="1.4" transform="rotate(-90 365 320)">JL. DESA KUALA DUA</text>
+    <text x="315" y="408" text-anchor="middle" font-size="13" letter-spacing="1.2" transform="rotate(-7 315 408)">ALTER SUPADIO • SUNGAI ASAM</text>
+    <text x="88" y="54" font-size="11" fill="#77877e">Masjid Raudlatul Hidayah</text>
+    <text x="456" y="54" font-size="11" fill="#77877e">Masjid Al-Hidayah</text>
+    <text x="462" y="312" font-size="11" fill="#77877e">Toko Pak Ahmad</text>
+  </g>
+  <g transform="translate(110 72)"><use href="#mosque"/></g>
+  <g transform="translate(510 72)"><use href="#mosque"/></g>
+  <g transform="translate(510 285)"><use href="#shop"/></g>
+  <g transform="translate(112 260)"><use href="#mosque"/></g>
+  <text x="64" y="285" font-family="Georgia,serif" font-size="11" fill="#77877e">Landmark</text>
+  <path class="location-route" d="M70 395C150 365 232 336 275 282C310 241 350 211 350 170L350 110" fill="none" stroke="#b38a4d" stroke-width="5" stroke-linecap="round"/>
+  <circle class="location-pin-pulse" cx="350" cy="110" r="12" fill="none" stroke="#b38a4d" stroke-width="2"/>
+  <g filter="url(#softShadow)" transform="translate(350 110)">
+    <path d="M0-27C-16-27-25-16-25-3C-25 14 0 36 0 36S25 14 25-3C25-16 16-27 0-27Z" fill="#8b4f55" stroke="#fff8ee" stroke-width="2"/>
+    <path d="M0-16C-7-16-12-11-12-5C-12 1 0 15 0 15S12 1 12-5C12-11 7-16 0-16Z" fill="#f7eee6"/>
+    <path d="M0-8C-4-8-7-5-7-1C-7 3 0 9 0 9S7 3 7-1C7-5 4-8 0-8Z" fill="#b38a4d"/>
+  </g>
+  <text x="350" y="45" text-anchor="middle" font-family="Georgia,serif" font-size="16" font-weight="bold" fill="#51443f">Kediaman Mempelai Wanita</text>
+  <text x="350" y="64" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" letter-spacing="1" fill="#77877e">AKAD &amp; RESEPSI</text>
+  <circle class="location-route-marker" cx="0" cy="0" r="7" fill="#b38a4d" stroke="#fffaf0" stroke-width="3" filter="url(#softShadow)"/>
+  <g transform="translate(52 444)"><path d="M0-5L12 0L0 5L3 0Z" fill="#b38a4d"/><text x="20" y="4" font-family="Arial,sans-serif" font-size="11" letter-spacing="1" fill="#77877e">RUTE MENUJU LOKASI</text></g>
+</svg>

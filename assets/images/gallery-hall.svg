@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs><linearGradient id="wall" x2="0" y2="1"><stop stop-color="#D9DDD5"/><stop offset=".55" stop-color="#F8F8F3"/><stop offset="1" stop-color="#C4C9C0"/></linearGradient><linearGradient id="floor" x2="0" y2="1"><stop stop-color="#F8F7F2"/><stop offset="1" stop-color="#BCC2B8"/></linearGradient></defs>
+  <rect width="1200" height="800" fill="url(#wall)"/>
+  <path d="M0 0H1200L780 420H420L0 0Z" fill="#F4F5EF" opacity=".65"/>
+  <path d="M0 800H1200L756 423H444L0 800Z" fill="url(#floor)"/>
+  <g fill="none" stroke="#B9BDB4"><path d="M0 0L460 430M1200 0L740 430M0 800L460 430M1200 800L740 430"/><path d="M0 180H1200M0 650H1200" opacity=".4"/></g>
+  <g fill="#F9F9F4" stroke="#B5A077" stroke-width="2">
+    <path d="M80 610V219C80 134 157 126 210 77L250 39L290 77C343 126 420 134 420 219V610H377V229C377 170 325 151 278 112L250 87L222 112C175 151 123 170 123 229V610H80Z"/>
+    <path d="M780 610V219C780 134 857 126 910 77L950 39L990 77C1043 126 1120 134 1120 219V610H1077V229C1077 170 1025 151 978 112L950 87L922 112C875 151 823 170 823 229V610H780Z"/>
+  </g>
+  <path d="M425 506V273C425 210 489 187 534 146L600 87L666 146C711 187 775 210 775 273V506" fill="#FAFAF6" stroke="#C6C9C1" stroke-width="9"/>
+  <path d="M448 506V284C448 231 501 211 547 170L600 121L653 170C699 211 752 231 752 284V506" fill="#E7EBE3" stroke="#AF986C"/>
+  <g stroke="#899780" stroke-width="3"><path d="M0 733C145 663 199 584 233 492M1200 733C1055 663 1001 584 967 492"/></g>
+  <g fill="#FCFCF7" stroke="#D4D7CD"><circle cx="82" cy="682" r="43"/><circle cx="143" cy="632" r="51"/><circle cx="197" cy="566" r="40"/><circle cx="1118" cy="682" r="43"/><circle cx="1057" cy="632" r="51"/><circle cx="1003" cy="566" r="40"/></g>
+  <g fill="#FDFCF7" stroke="#C7C8BF"><path d="M322 669H341V563H322V669ZM859 669H878V563H859V669Z"/><path d="M292 694H311V601H292V694ZM889 694H908V601H889V694Z"/></g>
+  <g fill="#D8AF5E"><path d="M331 549C317 535 329 520 333 514C338 528 345 540 331 549ZM868 549C854 535 866 520 870 514C875 528 882 540 868 549ZM301 588C287 574 299 559 303 553C308 567 315 579 301 588ZM898 588C884 574 896 559 900 553C905 567 912 579 898 588Z"/></g>
+  <g fill="#E8C77F" opacity=".25"><circle cx="331" cy="539" r="32"/><circle cx="869" cy="539" r="32"/><circle cx="301" cy="578" r="28"/><circle cx="899" cy="578" r="28"/></g>
+</svg>

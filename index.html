@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f4f0">
+  <meta name="description" content="">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css?v=20261114-0745">
+  <script defer src="js/data.js?v=20261114-0745"></script>
+  <script defer src="js/scene.js?v=20261114-0745"></script>
+  <script defer src="js/theme.js?v=20261114-0745"></script>
+  <script defer src="js/main.js?v=20261114-0745"></script>
+</head>
+<body class="is-locked">
+  <a class="skip-link" id="skipLink" href="#invitation"></a>
+
+  <section class="cover" id="cover" aria-labelledby="coverTitle">
+    <div class="cover-grain" aria-hidden="true"></div>
+    <div class="demo-badge" data-bind="meta.demoLabel"></div>
+    <div class="cover-shell">
+      <div class="cover-copy">
+        <img class="cover-floral cover-floral-top" data-asset="floral" alt="" aria-hidden="true">
+        <p class="eyebrow" id="coverEyebrow"></p>
+        <div class="fine-rule" aria-hidden="true"><span></span><i></i><span></span></div>
+        <h1 class="cover-title script" id="coverTitle"></h1>
+        <p class="cover-date" id="coverDate"></p>
+        <p class="cover-intro" id="coverIntro"></p>
+        <div class="guest-card">
+          <p class="guest-greeting" id="guestGreeting"></p>
+          <p class="guest-name" id="guestName"></p>
+          <p class="guest-note" id="guestNote"></p>
+        </div>
+        <button class="button button-primary open-button" id="openInvitation" type="button">
+          <span id="openLabel"></span>
+          <span class="button-arrow" aria-hidden="true">→</span>
+        </button>
+        <p class="button-hint" id="openHint"></p>
+      </div>
+
+      <div class="cover-art" aria-hidden="false">
+        <div class="cover-halo" aria-hidden="true"></div>
+        <div class="arch-frame cover-arch">
+          <img class="arch-outline" data-asset="arch" alt="" aria-hidden="true">
+          <div class="arch-photo-wrap">
+            <img class="arch-photo" id="coverPhoto" data-asset="couple" alt="">
+          </div>
+        </div>
+        <img class="cover-floral cover-floral-bottom" data-asset="floral" alt="" aria-hidden="true">
+        <div class="cover-monogram" aria-hidden="true"><span id="monogramLeft"></span><i></i><span id="monogramRight"></span></div>
+      </div>
+    </div>
+    <div class="cover-number" id="coverNumber" aria-hidden="true"></div>
+  </section>
+
+  <section class="scene" id="scene" aria-labelledby="sceneTitle" hidden>
+    <div class="scene-viewport" id="sceneViewport">
+      <div class="scene-world" id="sceneWorld" aria-hidden="true">
+        <div class="scene-light"></div>
+        <div class="scene-corridor">
+          <div class="corridor-ceiling"></div>
+          <div class="corridor-floor"></div>
+          <div class="corridor-line line-one"></div>
+          <div class="corridor-line line-two"></div>
+          <div class="corridor-line line-three"></div>
+        </div>
+        <div class="scene-depth depth-back" data-depth="0.15">
+          <img class="scene-arch arch-back" data-asset="arch" alt="">
+        </div>
+        <div class="scene-depth depth-middle" data-depth="0.35">
+          <img class="scene-arch arch-middle" data-asset="arch" alt="">
+          <div class="scene-candles candles-left">
+            <i></i><i></i><i></i>
+          </div>
+          <div class="scene-candles candles-right">
+            <i></i><i></i><i></i>
+          </div>
+        </div>
+        <div class="scene-depth depth-portrait" data-depth="0.55">
+          <div class="scene-portrait">
+            <div class="portrait-glow"></div>
+            <img id="scenePhoto" data-asset="couple" alt="">
+          </div>
+        </div>
+        <div class="scene-depth depth-copy" data-depth="0.7">
+          <div class="scene-copy">
+            <p class="scene-eyebrow" id="sceneEyebrow"></p>
+            <h2 class="scene-title script" id="sceneTitle"></h2>
+            <p class="scene-subtitle" id="sceneSubtitle"></p>
+            <div class="scene-date-block">
+              <span id="sceneSaveDate"></span>
+              <strong id="sceneDate"></strong>
+            </div>
+          </div>
+        </div>
+        <div class="scene-depth depth-floral" data-depth="0.9">
+          <img class="scene-floral floral-left" data-asset="floral" alt="">
+          <img class="scene-floral floral-right" data-asset="floral" alt="">
+        </div>
+        <div class="scene-vignette"></div>
+      </div>
+    </div>
+
+    <div class="scene-topbar">
+      <span class="scene-demo" data-bind="meta.demoLabel"></span>
+      <div class="scene-actions">
+        <button class="button button-glass" id="replayScene" type="button"></button>
+        <button class="button button-glass" id="skipScene" type="button"></button>
+      </div>
+    </div>
+    <p class="sr-only" id="motionNotice"></p>
+    <div class="scene-progress" aria-hidden="true"><span id="sceneProgress"></span></div>
+  </section>
+
+  <nav class="invitation-nav" id="invitationNav" aria-label="" hidden>
+    <div class="nav-links" id="navLinks"></div>
+    <button class="nav-icon" id="navReplay" type="button" aria-label="" title="">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10a8 8 0 1 1 2 7M4 10V4m0 6h6"/></svg>
+    </button>
+    <button class="nav-icon" id="audioToggle" type="button" aria-label="" title="" hidden>
+      <svg class="sound-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v6h4l5 4V5L9 9H5Zm12 0a5 5 0 0 1 0 6m2-9a9 9 0 0 1 0 12"/></svg>
+      <svg class="sound-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v6h4l5 4V5L9 9H5Zm12 1 4 4m0-4-4 4"/></svg>
+    </button>
+    <audio id="backgroundAudio" preload="none"></audio>
+  </nav>
+
+  <main id="invitation" tabindex="-1" hidden>
+    <section class="hero section" id="home" aria-labelledby="heroTitle">
+      <div class="hero-watermark script" id="heroWatermark" aria-hidden="true"></div>
+      <img class="hero-floral hero-floral-left" data-asset="floral" alt="" aria-hidden="true">
+      <img class="hero-floral hero-floral-right" data-asset="floral" alt="" aria-hidden="true">
+      <div class="hero-inner">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" id="heroEyebrow"></p>
+          <h1 class="hero-title script" id="heroTitle"></h1>
+          <div class="fine-rule" aria-hidden="true"><span></span><i></i><span></span></div>
+          <p class="hero-date" id="heroDate"></p>
+          <p class="hero-invitation" id="heroInvitation"></p>
+          <a class="text-link" href="#countdown"><span id="heroScroll"></span><i aria-hidden="true">↓</i></a>
+        </div>
+        <div class="hero-art reveal">
+          <div class="arch-frame hero-arch">
+            <img class="arch-outline" data-asset="arch" alt="" aria-hidden="true">
+            <div class="arch-photo-wrap">
+              <img class="arch-photo" id="heroPhoto" data-asset="couple" alt="">
+            </div>
+          </div>
+          <div class="hero-date-seal" aria-hidden="true"><span id="sealDay"></span><small id="sealMonth"></small><span id="sealYear"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="countdown-section section" id="countdown" aria-labelledby="countdownTitle">
+      <div class="section-inner narrow center reveal">
+        <p class="eyebrow" id="countdownEyebrow"></p>
+        <h2 class="section-title" id="countdownTitle"></h2>
+        <p class="section-intro" id="countdownDescription"></p>
+        <div class="countdown" id="countdownTimer" role="timer" aria-live="off">
+          <div class="countdown-item"><strong id="days">000</strong><span id="daysLabel"></span></div>
+          <div class="countdown-divider" aria-hidden="true">:</div>
+          <div class="countdown-item"><strong id="hours">00</strong><span id="hoursLabel"></span></div>
+          <div class="countdown-divider" aria-hidden="true">:</div>
+          <div class="countdown-item"><strong id="minutes">00</strong><span id="minutesLabel"></span></div>
+          <div class="countdown-divider" aria-hidden="true">:</div>
+          <div class="countdown-item"><strong id="seconds">00</strong><span id="secondsLabel"></span></div>
+        </div>
+        <p class="countdown-complete" id="countdownComplete" hidden></p>
+      </div>
+    </section>
+
+    <section class="quote-section section" id="quote" aria-labelledby="quoteCitation">
+      <div class="quote-ornament" aria-hidden="true">❧</div>
+      <blockquote class="section-inner narrow center reveal">
+        <p class="quote-arabic" id="quoteArabic" lang="ar" dir="rtl"></p>
+        <div class="fine-rule" aria-hidden="true"><span></span><i></i><span></span></div>
+        <p class="quote-text" id="quoteText"></p>
+        <cite id="quoteCitation"></cite>
+      </blockquote>
+    </section>
+
+    <section class="profiles-section section" id="couple" aria-labelledby="profilesTitle">
+      <div class="section-inner">
+        <header class="section-header center reveal">
+          <p class="eyebrow" id="profilesEyebrow"></p>
+          <h2 class="section-title script" id="profilesTitle"></h2>
+          <p class="section-intro" id="profilesIntro"></p>
+        </header>
+        <div class="profiles-grid" id="profilesGrid"></div>
+      </div>
+    </section>
+
+    <section class="events-section section" id="events" aria-labelledby="eventsTitle">
+      <img class="events-floral" data-asset="floral" alt="" aria-hidden="true">
+      <div class="section-inner">
+        <header class="section-header center reveal">
+          <p class="eyebrow light" id="eventsEyebrow"></p>
+          <h2 class="section-title script" id="eventsTitle"></h2>
+          <p class="section-intro" id="eventsIntro"></p>
+          <p class="time-hint" id="calendarHint"></p>
+        </header>
+        <div class="events-grid" id="eventsGrid"></div>
+        <figure class="location-visual reveal">
+          <div class="location-map-layout">
+            <a class="location-image-link" id="locationVisualLink" href="" target="_blank" rel="noopener noreferrer" aria-label="">
+              <span class="location-map-wrap" id="locationMapWrap"></span>
+            </a>
+            <aside class="location-qr-static" aria-label="QR lokasi">
+              <img id="locationQrImage" src="" alt="">
+            </aside>
+          </div>
+          <figcaption>
+            <span id="locationVisualCaption"></span>
+            <a class="button button-outline" id="locationMapsButton" href="" target="_blank" rel="noopener noreferrer"></a>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="gifts-section section" id="gifts" aria-labelledby="giftsTitle">
+      <div class="section-inner narrow">
+        <header class="section-header center reveal">
+          <p class="eyebrow" id="giftsEyebrow"></p>
+          <h2 class="section-title script" id="giftsTitle"></h2>
+          <p class="section-intro" id="giftsIntro"></p>
+        </header>
+        <div class="gifts-grid" id="giftsGrid"></div>
+      </div>
+    </section>
+
+    <section class="gallery-section section" id="gallery" aria-labelledby="galleryTitle">
+      <div class="section-inner">
+        <header class="section-header center reveal">
+          <p class="eyebrow" id="galleryEyebrow"></p>
+          <h2 class="section-title script" id="galleryTitle"></h2>
+          <p class="section-intro" id="galleryIntro"></p>
+        </header>
+        <div class="gallery-viewer reveal">
+          <div class="gallery-main-wrap">
+            <figure class="gallery-main">
+              <video id="galleryVideo" muted loop playsinline preload="metadata" poster="" aria-describedby="galleryDescription galleryCaption" disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
+                <source id="galleryVideoSource" src="" type="video/mp4">
+              </video>
+              <img class="gallery-couple" id="galleryCouple" src="" alt="">
+              <figcaption><span id="galleryCaption"></span><small id="galleryMeta"></small></figcaption>
+            </figure>
+          </div>
+          <p class="sr-only" id="galleryDescription"></p>
+          <div class="gallery-controls">
+            <button class="button button-outline gallery-toggle" id="galleryToggle" type="button" aria-label=""></button>
+            <p class="gallery-status" id="galleryStatus" role="status" aria-live="polite" aria-atomic="true"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-section section" id="closing" aria-labelledby="closingTitle">
+      <div class="closing-glow" aria-hidden="true"></div>
+      <img class="closing-floral closing-floral-left" data-asset="floral" alt="" aria-hidden="true">
+      <img class="closing-floral closing-floral-right" data-asset="floral" alt="" aria-hidden="true">
+      <div class="section-inner narrow center reveal">
+        <p class="eyebrow" id="closingEyebrow"></p>
+        <h2 class="section-title" id="closingTitle"></h2>
+        <p class="closing-message" id="closingMessage"></p>
+        <div class="fine-rule" aria-hidden="true"><span></span><i></i><span></span></div>
+        <p class="closing-signoff" id="closingSignoff"></p>
+        <p class="closing-names script" id="closingNames"></p>
+        <button class="button button-outline" id="backToCover" type="button"></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer" hidden>
+    <p id="footerText"></p>
+  </footer>
+</body>
+</html>
