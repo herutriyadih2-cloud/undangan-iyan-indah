@@ -175,30 +175,30 @@ window.invitationData = {
         title: "Akad Nikah",
         date: "Sabtu, 5 Desember 2026",
         time: "08.00 — 13.00 WIB",
-        venue: "Kediaman Mempelai Wanita",
-        address: "Jl. Desa Kuala Dua, Gg. Selat Madura (Sungai Adong Darat)",
-        mapsUrl: "https://www.google.com/maps/search/?api=1&query=-0.176886%2C109.435799"
+        venue: "KUA Kecamatan Sungai Raya",
+        address: "KUA Kecamatan Sungai Raya",
+        mapsUrl: "https://www.google.com/maps/search/?api=1&query=KUA+Kecamatan+Sungai+Raya"
       },
       {
         type: "Resepsi",
         title: "Resepsi Pernikahan",
         date: "Minggu, 6 Desember 2026",
         time: "13.00 WIB — Selesai",
-        venue: "Kediaman Mempelai Wanita",
-        address: "Jl. Desa Kuala Dua, Gg. Selat Madura (Sungai Adong Darat)",
-        mapsUrl: "https://www.google.com/maps/search/?api=1&query=-0.176886%2C109.435799"
+        venue: "KUA Kecamatan Sungai Raya",
+        address: "KUA Kecamatan Sungai Raya",
+        mapsUrl: "https://www.google.com/maps/search/?api=1&query=KUA+Kecamatan+Sungai+Raya"
       }
     ],
     locationVisual: {
       src: "assets/images/location-map.svg",
       fullSrc: "assets/images/location-map.svg",
       qrSrc: "assets/images/location-qr.webp",
-      alt: "Denah vektor dan QR lokasi akad serta resepsi di Kediaman Mempelai Wanita",
+      alt: "Denah vektor dan QR lokasi akad serta resepsi di KUA Kecamatan Sungai Raya",
       qrAlt: "QR asli untuk informasi lokasi akad dan resepsi",
       caption: "Pindai QR atau ikuti rute pada denah untuk menuju lokasi akad dan resepsi. Klik denah untuk melihat ukuran penuh.",
       linkLabel: "Lihat denah vektor lokasi ukuran penuh di tab baru",
       mapsButton: "Buka Titik di Google Maps",
-      mapsUrl: "https://www.google.com/maps/search/?api=1&query=-0.176886%2C109.435799",
+      mapsUrl: "https://www.google.com/maps/search/?api=1&query=KUA+Kecamatan+Sungai+Raya",
       mapLabels: {
         mainRoad: "GG. SELAT MADURA",
         verticalRoad: "JL. DESA KUALA DUA",
@@ -207,7 +207,7 @@ window.invitationData = {
         mosqueRight: "Masjid Al-Hidayah",
         shop: "Toko Pak Ahmad",
         landmark: "Landmark",
-        home: "Kediaman Mempelai Wanita",
+        home: "KUA Kecamatan Sungai Raya",
         homeSubtitle: "AKAD & RESEPSI",
         route: "RUTE MENUJU LOKASI"
       },

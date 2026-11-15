@@ -8,7 +8,7 @@ Data yang sudah dimasukkan dari pengguna:
 
 - **Iyan None**, putra ketiga dari Bapak Herli & Ibu Ida. Nama panggilan digunakan karena lebih banyak dikenal.
 - **Indah**, putri kelima dari Bapak Jumadi & Ibu Maisuna.
-- Lokasi di Kediaman Mempelai Wanita, Jl. Desa Kuala Dua, Gg. Selat Madura (Sungai Adong Darat).
+- Lokasi akad dan resepsi di **KUA Kecamatan Sungai Raya**.
 - Amplop Digital BCA `1711238951` dan DANA `0895342263665`, keduanya a/n **Muliansah** sesuai data pengguna.
 
 **Tanggal dan jam sudah dikonfirmasi:** akad pada Sabtu, 5 Desember 2026 pukul 08.00–13.00 WIB dan resepsi pada Minggu, 6 Desember 2026 pukul 13.00 WIB–selesai. Countdown diarahkan ke akad pada 5 Desember 2026 pukul 08.00 WIB.
@@ -74,7 +74,7 @@ Edit `js/data.js`. Nama mempelai/orang tua, nama tamu, tanggal ISO, teks, alamat
 weddingDateISO: "2026-12-05T08:00:00+07:00"
 ```
 
-Link Maps untuk akad dan resepsi menggunakan titik koordinat yang diberikan pengguna: **-0.176886, 109.435799**, melalui `https://www.google.com/maps/search/?api=1&query=-0.176886%2C109.435799`.
+Link Maps untuk akad dan resepsi menggunakan pencarian **KUA Kecamatan Sungai Raya**, melalui `https://www.google.com/maps/search/?api=1&query=KUA+Kecamatan+Sungai+Raya`.
 
 Setelah kartu acara terdapat komposisi **denah vektor + QR terpisah**. Denah `location-map.svg` menampilkan Gg. Selat Madura, Jl. Desa Kuala Dua, Alter Supadio/Sungai Asam, landmark, serta pin Kediaman Mempelai Wanita. Rute bergerak melalui `stroke-dashoffset`, pin berdenyut, dan marker mengikuti rute; seluruhnya diam pada reduced-motion. QR hasil crop `location-qr.webp` tampil stabil tanpa animasi.
 
